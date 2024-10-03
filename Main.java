@@ -1,13 +1,13 @@
 /********************************************
-*	AUTHORS:	<your names>
-* COLLABORATORS: <name of peer, tutor, instructor, anyone else who helped>
+*	AUTHORS:	Joe Carita
+* COLLABORATORS: 
 *	LAST MODIFIED:	<date of last change>
 ********************************************/
 
 /********************************************
-*	<TITLE OF PROGRAM>
+*	<TITLE OF PROGRAM> Joe's Magical Dungeon
 *********************************************
-*	PROGRAM DESCRIPTION:
+*	PROGRAM DESCRIPTION: This is a brief text-based adventure game. 
 *	<1-2 sentences describing overall program>
 *********************************************
 *	ALGORITHM:
@@ -27,13 +27,21 @@ public class Main
     /***** DECLARATION SECTION *****/
 
     /***** INITIALIZATION SECTION *****/
-
+    String currentChoice;
     /***** INTRO SECTION *****/
 
     /***** PROCESSING SECTION *****/
 
     /***** OUTPUT SECTION *****/
-    
+    currentChoice = UtilityBelt.readString("You arrive at a dungeon at the bottom of a great mountain. You've heard tales of the great riches within that none have laid claim to because they were lazy. After entering, you can go left or right. Which way would you want to go?", 1,20);
+    if (currentChoice.equals("Left"))
+    ifelse (currentChoice.equals("Right"))
+    ifelse System.out.println("That is not a valid route, and in your indecision you fail to notice the tumbling of rocks from above you. Your adventure is over.");
+  
+  
+  
   }
   /***** STATIC METHODS *****/
+  
 }
+
