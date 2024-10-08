@@ -34,11 +34,11 @@ public class Main
 
     /***** OUTPUT SECTION *****/
     currentChoice = UtilityBelt.readString("You arrive at a dungeon at the bottom of a great mountain. You've heard tales of the great riches within that none have laid claim to because they were lazy.\nAfter entering, you can go left or right. Which way would you want to go? ", 1,20);
-    if (currentChoice.equals("Left"))
+    if (currentChoice.equalsIgnoreCase("Left"))
       {
         UtilityBelt.readString("bruh",1,30);
       }
-    else if (currentChoice.equals("Right"))
+    else if (currentChoice.equalsIgnoreCase("Right"))
       {
         System.out.println("Going to the right, you run into a massive pool of acid.");
       }
