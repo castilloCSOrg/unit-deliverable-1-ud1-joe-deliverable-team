@@ -21,7 +21,7 @@
 public class Main 
 {
   /***** CONSTANT SECTION *****/
-  static String heldItem;
+  static boolean spongePickedUp = false;
   public static void main(String[] args)
   {
     /***** DECLARATION SECTION *****/
@@ -48,6 +48,27 @@ public class Main
       }
   }
   /***** STATIC METHODS *****/
-  
+  public static void firstLeftRoom()
+    {
+      String pickUp;
+      if (spongePickedUp = true)
+        {
+          System.out.println("You find a room full of sponges, yet slightly less than the last time you were here. You suspect it is your fault, and that the Sponge Gods\nwill not be happy if you take another now. You return to the fork in the road");
+        }
+      else
+        {
+          pickUp = UtilityBelt.readString("You find a room full of sponges. A sign on the wall states that they can absorb anything you can throw at them, which definitely could be useful. Do you want to pick one up?",1,30);
+          if(pickUp.equalsIgnoreCase("Yes"))
+            {
+              System.out.println("You pick up a sponge and return to the fork in the road.");
+            }
+          else if(pickUp.equalsIgnoreCase("No"))
+            {
+              System.out.println("You decide against it, fearing a spongey trap. Instead, you decide to keep moving.");
+            }
+      }
+    }
+
 }
 
+//Keep it simple, you can build off this with loops later. For now, keep it as one path (and probably make wrong turns fatal idk.)
