@@ -5,7 +5,7 @@
 ********************************************/
 
 /********************************************
-*	<TITLE OF PROGRAM> Joe's Magical Dungeon
+*	<TITLE OF PROGRAM> Joe's Unoriginal Dungeon
 *********************************************
 *	PROGRAM DESCRIPTION: This is a brief text-based adventure game. 
 *	<1-2 sentences describing overall program>
@@ -33,40 +33,38 @@ public class Main
     /***** PROCESSING SECTION *****/
 
     /***** OUTPUT SECTION *****/
-    currentChoice = UtilityBelt.readString("You arrive at a dungeon at the bottom of a great mountain. You've heard tales of the great riches within that none have laid claim to because they were lazy.\nAfter entering, you can go left or right. Which way would you want to go? ", 1,20);
+    currentChoice = UtilityBelt.readString("You arrive at a dungeon at the bottom of a great mountain. You've heard tales of the great riches within that none have laid claim to because they were lazy.\n\nAfter entering, you can go left or right. Which way would you want to go? ", 1,20);
     if (currentChoice.equalsIgnoreCase("Left"))
       {
-        UtilityBelt.readString("bruh",1,30);
+        Main.spongeEncouter();
+        System.out.println(spongePickedUp);
       }
     else if (currentChoice.equalsIgnoreCase("Right"))
       {
-        System.out.println("Going to the right, you run into a massive pool of acid.");
+        System.out.println("\nGoing to the right, a door slams shut behind you. As you search for a way to escape, you find none. Your adventure is over.");
       }
     else
       {
-        System.out.println("That is not a valid route, and in your indecision you fail to notice the tumbling of rocks from above you. Your adventure is over.");
+        System.out.println("\nThat is not a valid route, and in your indecision you fail to notice the tumbling of rocks from above you. Your adventure is over.");
       }
   }
   /***** STATIC METHODS *****/
-  public static void firstLeftRoom()
+  public static void spongeEncouter()
     {
-      String pickUp;
-      if (spongePickedUp = true)
+      String pickUp = UtilityBelt.readString("\nAs you keep moving forward, you find a pile of sponges along the side of the hallway. A sign on the wall states that they can absorb anything you can throw at them, which definitely\ncould be useful. Do you want to pick one up? ",1,30);
+      if(pickUp.equalsIgnoreCase("Yes"))
         {
-          System.out.println("You find a room full of sponges, yet slightly less than the last time you were here. You suspect it is your fault, and that the Sponge Gods\nwill not be happy if you take another now. You return to the fork in the road");
+          spongePickedUp = true;
+          System.out.println("\nYou pick up a sponge and decide to keep moving.");
+        }
+      else if(pickUp.equalsIgnoreCase("No"))
+        {
+          System.out.println("\nYou decide against it, fearing retribution from those you would be stealing a sponge from. Instead, you decide to keep moving.");
         }
       else
         {
-          pickUp = UtilityBelt.readString("You find a room full of sponges. A sign on the wall states that they can absorb anything you can throw at them, which definitely could be useful. Do you want to pick one up?",1,30);
-          if(pickUp.equalsIgnoreCase("Yes"))
-            {
-              System.out.println("You pick up a sponge and return to the fork in the road.");
-            }
-          else if(pickUp.equalsIgnoreCase("No"))
-            {
-              System.out.println("You decide against it, fearing a spongey trap. Instead, you decide to keep moving.");
-            }
-      }
+          System.out.println("\nOut of wrath for your indecision towards their blessing, the sponge gods remove the pile from existence, damning you to a spongeless existence for the rest of your days. The only\noption now is to keep moving.");
+        }
     }
 
 }
