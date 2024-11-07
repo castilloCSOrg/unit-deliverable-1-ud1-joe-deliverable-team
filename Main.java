@@ -37,7 +37,10 @@ public class Main
     if (currentChoice.equalsIgnoreCase("Left"))
       {
         Main.spongeEncouter();
-        System.out.println(spongePickedUp);
+        if(spongePickedUp = true)
+        {
+          lakeEncounter(spongePickedUp);
+        }
       }
     else if (currentChoice.equalsIgnoreCase("Right"))
       {
@@ -67,6 +70,13 @@ public class Main
         }
     }
 
+  public static void lakeEncounter(boolean spongeStatus)
+    {
+      if(spongeStatus = true)
+      {
+
+      }
+    }
 }
 
 //Keep it simple, you can build off this with loops later. For now, keep it as one path (and probably make wrong turns fatal idk.)
